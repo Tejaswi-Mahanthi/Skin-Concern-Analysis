@@ -269,7 +269,7 @@ st.markdown("""
 # ✅ 5th Section: Full-Width Background
 st.markdown(f"""
     <div class="background-section-5">
-        <form action="Capture.py">
+        <form action="/Capture">
             <button class="capture-button" type="submit">Capture</button>
         </form>
     </div>
