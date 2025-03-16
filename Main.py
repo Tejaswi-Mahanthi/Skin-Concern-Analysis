@@ -8,6 +8,7 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 import base64
 import os
+os.system('pip install ultralytics')
 
 
 st.set_page_config(page_title="Skin Analysis App", layout="wide")
