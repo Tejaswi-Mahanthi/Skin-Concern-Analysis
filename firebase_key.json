@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "skinproducts-recommendation",
+  "private_key_id": "b9dea93362baa6fa1d5a057e7270134c3f57d2b3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCPLcJwPJKpVLQ7\nf3QhS2YNT/v1BG55GQKFJYpdhfMbQg7swNh6UMDun4k8gXXV4nwuovYaatxlyBc0\n1NpY7Is0P7Vo/AEsgjWrjyoInUBBYd9OwS+CCL3msJUFlEw9TKed7Xag20jLLvqm\nMTlHWDw9BXi+89mxl4G6F4pVQlOC0Xi57/Krubn8bk3NE26nnbimTx4zmW1DrJf4\nVTMp7BUTBM1nl2mPLCQaMNX+ym8HUwdM0o7/zYCn9LVvIk1iTlBwHurMppql6l2c\nFktySO9fNigxVGzFLwIHizcs+YK+y0fd4FbEih4I3xeKlztShSt6RrYB7UQ2tGXl\nod/6MgEtAgMBAAECggEAQz6+n3ATgaviqj8GD80VtRLnxv+50u5IHLiw75PFxfuU\nfuVjxq6+rlQHZH95FGc248BtzaJ6uOLs40dE9ZbDGlsBnLke5ASTqGuo1jrkvtB0\nzMw2v9/TMNGma+RmmjOyVZ39pTbYTXVXC077E+MBB7fWKfjlOV9q8je0JK7uAfYj\n4PzO77ZxTmq5Xs34OjEKv+5Do7C03m1dPfZz3A+zvt7+jF9N72DtT3cVZH/drtRU\njvp5FFMgzPeJoLVBWldwTWoQk1sF1+wlGwW7wc99qE972k1SA4Dk06EmPB3nO5md\nVZJwXyiMjitjeIao5GsFfi7j9UvutOC97XoRkaackQKBgQDBUeo51rN4BBL++i7K\nxvfQidBfNJBdyn6IBkLd/3D8dN+MSu6wh90ExSADVWG5Rabi9BrC1i2Jhg3Ijd8J\ngQE0mzKm4FXnxiPft2J/bayQFKDz2RLO07Jb48kOuBI2hs5bR/jBcFz3yEY9Ezfx\nY5toB0FOBufUUvDabdZ5OOgcIwKBgQC9mfxXSPQEpkAHlWKrMfqIlvsS0PSyECIW\no1x5AiFF8O18Gh2CPxwMu2VZxJywtel17SLaxwQG96X/RnlxMedipyjDj92lk1dm\ncjPKW781aHtJfRMa7Pi0NTU3v+OkxD2GBqco3FYJ4pTH78CvzwJuxXT4biFy8ZMm\nNsFDMYjabwKBgQCTNX5n1r9JJ8kTUo2pKgPxT9BVfyBj21uo1yO6CtcN1y2XlkPW\nN08tX7J192F4BLsFXZ63OQLqEyOR0b7CbPLvDTNv8apY2P/eTrX5lRlvidXaejUh\nPAE4iedDhxWPYe3ngpHBM4AHywD5ZxYVgaUIfWXUNdv5ScNQgY1tN9FAAwKBgBaQ\n1S+uRxymjMhaRzwI3sCS957tr7Hhqaz4FHFyh3NDkYBLu2ddC4GYbB+a/uspO3gF\nmThgp2IM53zSbnHCdr+PFZLw9HhYaPaQcQmMkd1Rahr8/+Ecgx0vl/3ioL1jfc8N\ny6dZUgQrK3oAVvaVtLxqU9mdge2kQtcxfR76LkeRAoGAUG8/ELdxhfN/nTw1Oz2w\nbHimxHmD+ZTQxXY4Tgh6rJ8msZelJwfi4MIJ5pTlkIojCBgShMJWc0jI99v1fvpZ\n0sD+Qww/oRDTBxyBb4heT2/ntFroWjbyWkX8NI/hE6KgGcjh9PGtE69kOa7nlTBQ\nJDNGpFbgvJXNuDf2jXxFjw4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@skinproducts-recommendation.iam.gserviceaccount.com",
+  "client_id": "115060362858021584516",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40skinproducts-recommendation.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
