@@ -2,10 +2,10 @@ streamlit
 opencv-python-headless
 numpy
 pandas
-torch==2.1.0+cpu
+torch==2.1.0
 torchvision==0.16.0
 torchaudio==2.1.0
-ultralytics
+ultralytics==8.0.186
 firebase-admin
 markdown-it-py==3.0.0
 mdurl==0.1.2
