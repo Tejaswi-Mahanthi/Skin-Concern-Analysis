@@ -21,12 +21,12 @@ def get_base64_image(image_path):
 
 
 # ✅ Convert Pic4.webp to Base64
-pic4_path = "static/images/Pic4.webp"
+pic4_path = "Pic4.webp"
 pic4_base64 = get_base64_image(pic4_path)
 
 
 # ✅ Convert Pic5.jpg to Base64
-pic5_path = "static/images/Pic5.jpg"
+pic5_path = "Pic5.jpg"
 pic5_base64 = get_base64_image(pic5_path)
 
 # ✅ Inject CSS & HTML
@@ -232,9 +232,9 @@ st.markdown("""
 st.markdown("<div class='content'></div>", unsafe_allow_html=True)
 
 # ✅ 3rd Section - Image Carousel with Working Animation
-image_folder = "static/images"
 image_files = ["Pic1.webp", "Pic2.webp", "Pic3.webp"]
-image_b64_list = [get_base64_image(os.path.join(image_folder, img)) for img in image_files]
+image_b64_list = [get_base64_image(img) for img in image_files]
+
 
 carousel_html = f"""
 <div class="carousel-container">
