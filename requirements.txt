@@ -1,11 +1,13 @@
-opencv-python-headless
 streamlit
+opencv-python-headless
 numpy
 pandas
-opencv-python-headless
-torch==2.2.0+cpu
-torchvision==0.17.0+cpu
-torchaudio==2.2.0+cpu
--f https://download.pytorch.org/whl/torch/
-
-
+torch==2.1.0+cpu
+torchvision==0.16.0
+torchaudio==2.1.0
+ultralytics
+firebase-admin
+markdown-it-py==3.0.0
+mdurl==0.1.2
+pygments==2.19.1
+rich==13.9.4
