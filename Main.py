@@ -1,18 +1,32 @@
 import streamlit as st
-import os
+import cv2
+import numpy as np
+import torch
+from ultralytics import YOLO
+from PIL import Image
+import firebase_admin
+from firebase_admin import credentials, firestore
 import base64
+import os
 
 
 st.set_page_config(page_title="Skin Analysis App", layout="wide")
+
 
 # ✅ Function to Convert Image to Base64
 def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
+
 # ✅ Convert Pic4.webp to Base64
 pic4_path = "static/images/Pic4.webp"
 pic4_base64 = get_base64_image(pic4_path)
+
+
+# ✅ Convert Pic5.jpg to Base64
+pic5_path = "static/images/Pic5.jpg"
+pic5_base64 = get_base64_image(pic5_path)
 
 # ✅ Inject CSS & HTML
 st.markdown(f"""
@@ -44,24 +58,6 @@ st.markdown(f"""
             width: 250px;
         }}
         .icon {{ font-size: 20px; color: white; cursor: pointer; }}
-        .menu-bar {{
-            position: fixed;
-            top: 48px;
-            left: 0;
-            width: 100%;
-            background-color: #FFF5E1;
-            padding: 10px 0;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            z-index: 9998;
-        }}
-        .menu-bar span {{ cursor: pointer; padding: 5px 15px; }}
-        .menu-bar span:hover {{ color: #A94064; }}
 
         .content {{ margin-top: 0px; }}
 
@@ -126,7 +122,7 @@ st.markdown(f"""
         /* ✅ Left-aligned Skin Analysis Text */
         .skin-analysis-text {{
             position: absolute;
-            top: 40%;
+            top: 45%;
             left: 15%;
             font-size: 24px;
             font-weight: bold;
@@ -165,6 +161,49 @@ st.markdown(f"""
             0% {{ text-shadow: 0 0 5px #ff80ab, 0 0 10px #ff4081, 0 0 15px #ff80ab; }}
             100% {{ text-shadow: 0 0 10px #ff4081, 0 0 20px #ff80ab, 0 0 30px #ff4081; }}
         }}
+        .browse-button {{
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: #A94064;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }}
+        
+        /* ✅ 5th Section: Full-Width Background Image */
+        .background-section-5 {{
+            position: relative;
+            width: 100vw;
+            height: 90vh;
+            background: url("data:image/jpeg;base64,{pic5_base64}") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }}
+
+        .capture-button {{
+            position: absolute;
+            top: 70%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background-color: #A94064;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }}
+
+        .capture-button:hover {{
+            background-color: #8b324f;
+        }}
     </style>
 """, unsafe_allow_html=True)
 
@@ -182,22 +221,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
-    <div class="menu-bar">
-        <a href="/Capture" target="_self"><span>Capture</span></a>
-        <a href="/Browse" target="_self"><span>Browse</span></a>
-        <a href="/QR" target="_self"><span>QR</span></a>
-        <a href="/Chat" target="_self"><span>Chat</span></a>
-    </div>
-""", unsafe_allow_html=True)
-
-st.markdown("""
     <style>
         [data-testid="stSidebar"], [data-testid="collapsedControl"] {
             display: none !important;
         }
     </style>
 """, unsafe_allow_html=True)
-
 
 st.markdown("<div class='content'></div>", unsafe_allow_html=True)
 
@@ -223,11 +252,24 @@ st.markdown("""
             skin types and <br>
             know your right <br>
             skincare routine
+        <form action="/Browse">
+                <button class="browse-button" type="submit">Browse</button>
+        </form>
         </div>
         <div class="quote-overlay">
             The best makeup<br> foundation<br>
             you can wear<br>
             is glowing skin<br>
         </div>
+        
+    </div>
+""", unsafe_allow_html=True)
+
+# ✅ 5th Section: Full-Width Background
+st.markdown(f"""
+    <div class="background-section-5">
+        <form action="/Capture">
+            <button class="capture-button" type="submit">Capture</button>
+        </form>
     </div>
 """, unsafe_allow_html=True)
