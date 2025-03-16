@@ -9,11 +9,11 @@ from firebase_admin import credentials, firestore
 import os
 
 # Load YOLOv8 models
-classification_model = YOLO(r"C:\Users\HP\Downloads\best (8).pt")  # Classification Model
-segmentation_model = YOLO(r"C:\Users\HP\Downloads\best (9).pt")  # Segmentation Model
+classification_model = YOLO(r"best (8).pt")  # Classification Model
+segmentation_model = YOLO(r"best (9).pt")  # Segmentation Model
 
 # Firebase Setup
-firebase_key_path = r"C:\Users\HP\PycharmProjects\Skin Disease Prediction\firebase_key.json"
+firebase_key_path = r"firebase_key.json"
 if not firebase_admin._apps:
     cred = credentials.Certificate(firebase_key_path)
     firebase_admin.initialize_app(cred)
